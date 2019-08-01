@@ -1,0 +1,53 @@
+{
+  "name": "@orchatect/sleepmask",
+  "version": "0.0.31",
+  "source": "source/index.js",
+  "main": "build/index.js",
+  "unpkg": "build/index.umd.js",
+  "license": "MIT",
+  "scripts": {
+    "pub": "node scripts build && cd build && yarn publish",
+    "watch": "microbundle watch"
+  },
+  "files": [
+    "./"
+  ],
+  "dependencies": {
+    "@orchatect/standards": "^0.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "@babel/plugin-syntax-jsx": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.5.5",
+    "babel-plugin-jsx-control-statements": "^4.0.0",
+    "babel-plugin-macros": "^2.6.1",
+    "babel-plugin-transform-dev-warning": "^0.1.1",
+    "babel-preset-minify": "^0.5.0",
+    "healthier": "^2.0.0",
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2",
+    "shelljs": "^0.8.3"
+  },
+  "prettier": "@orchatect/standards/prettier.config",
+  "babel": {
+    "extends": "@orchatect/standards/babel.config"
+  },
+  "rollupNamedExports": [
+    "appRouter",
+    "mapConfigToProps",
+    "queryBucket",
+    "createServer",
+    "generateRestEndpointUrl",
+    "getComponentServices",
+    "logger"
+  ]
+}
