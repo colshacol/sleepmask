@@ -1,12 +1,12 @@
 {
   "name": "@orchatect/sleepmask",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "source": "source/index.js",
   "main": "build/index.js",
   "unpkg": "build/index.umd.js",
   "license": "MIT",
   "scripts": {
-    "build": "microbundle --external react",
+    "build": "microbundle --target web",
     "watch": "microbundle watch",
     "prepublishOnly": "yarn build"
   },
