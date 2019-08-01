@@ -1,12 +1,13 @@
 {
   "name": "@orchatect/sleepmask",
-  "version": "0.0.1",
+  "version": "0.0.21",
   "source": "source/index.js",
   "main": "build/index.js",
   "license": "MIT",
   "scripts": {
-    "build": "microbundle --target web --format cjs",
-    "watch": "microbundle watch"
+    "build": "microbundle --external react",
+    "watch": "microbundle watch",
+    "prepublishOnly": "yarn build"
   },
   "dependencies": {
     "@orchatect/standards": "^0.0.2",
@@ -35,6 +36,7 @@
     "postcss": "^7.0.17",
     "postcss-cssnext": "^3.1.0",
     "prettier": "^1.18.2",
+    "react": "^16.8.6",
     "regenerator-runtime": "^0.13.2",
     "rollup": "^1.17.0",
     "rollup-plugin-babel": "^4.3.3",
