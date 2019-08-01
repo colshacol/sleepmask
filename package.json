@@ -1,6 +1,6 @@
 {
   "name": "@orchatect/sleepmask",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "source": "source/index.js",
   "main": "build/index.js",
   "unpkg": "build/index.umd.js",
@@ -52,7 +52,7 @@
     "extends": "@orchatect/standards/babel.config"
   },
   "rollupNamedExports": [
-    "router",
+    "appRouter",
     "mapConfigToProps",
     "queryBucket",
     "createServer",
