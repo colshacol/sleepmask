@@ -1,6 +1,6 @@
 {
   "name": "@orchatect/sleepmask",
-  "version": "0.0.37",
+  "version": "0.0.38",
   "source": "source/index.js",
   "main": "build/index.js",
   "unpkg": "build/index.umd.js",
