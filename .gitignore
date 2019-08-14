@@ -10,7 +10,6 @@
 # compiled output directories
 /dist
 /lib
-/build
 bin/*.js
 
 

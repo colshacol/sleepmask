@@ -6,9 +6,8 @@
   "unpkg": "build/index.umd.js",
   "license": "MIT",
   "scripts": {
-    "build": "node scripts build",
-    "watch": "microbundle watch",
-    "prepublishOnly": "yarn build && cd build"
+    "pub": "node scripts build && cd build && yarn publish",
+    "watch": "microbundle watch"
   },
   "files": [
     "./"

@@ -1,23 +1,27 @@
-const SCRIPT_URL = 'https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js'
-const MODULE_URL = 'https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js'
+import { injectScript } from "../injectScript"
+
+const SCRIPT_URL =
+  "https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"
+const MODULE_URL =
+  "https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"
+
+// <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
 export const injectIonIconsScripts = () => {
-  const hasIonIconsScript = document.querySelector('#ionIconsScript')
-  const hasIonIconsModule = document.querySelector('#ionIconsModule')
+  injectScript({
+    src: "https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js",
+    id: "ionIcons"
+  })
 
-  if (!hasIonIconsScript) {
-    const ionIconsScript = document.createElement('script')
-    ionIconsModule.setAttribute('nomodule', '')
-    ionIconsScript.setAttribute('id', 'ionIconsScript')
-    ionIconsScript.setAttribute('src', SCRIPT_URL)
-    document.body.appendChild(ionIconsScript)
-  }
+  injectScript({
+    src: SCRIPT_URL,
+    id: "ionIconsScript",
+    nomodule: ""
+  })
 
-  if (!hasIonIconsModule) {
-    const ionIconsModule = document.createElement('script')
-    ionIconsModule.setAttribute('type', 'module')
-    ionIconsModule.setAttribute('id', 'ionIconsModule')
-    ionIconsModule.setAttribute('src', MODULE_URL)
-    document.body.appendChild(ionIconsModule)
-  }
+  injectScript({
+    src: MODULE_URL,
+    id: "ionIconsModule",
+    type: "module"
+  })
 }

@@ -1,3 +1,3 @@
-import Signale from 'signale'
+// import Signale from 'signale'
 
-export const logger = Signale
+export const logger = {}
